@@ -1,16 +1,16 @@
 :root {
-    --background-navbar: #6c5ce7;
-    --background-footer: #6c5ce7;
+    --background-navbar: #EBC2F3;
+    --background-footer: #EBC2F3;
     --color-footer: white;
-    --color-title: #0984e3;
-    --color-title-2: #0984e3;
-    --color-title-3: #0984e3;
-    --color-title-4: #0984e3;
-    --color-title-5: #0984e3;
+    --color-title: #DBCDF0;
+    --color-title-2: #7b2cbf;
+    --color-title-3: #7b2cbf;
+    --color-title-4: #7b2cbf;
+    --color-title-5: #7b2cbf;
 }
 
 body {
-    background-color: #a29bfe;
+    background-color: #f3e5f5;
 }
 
 .navbar {
@@ -163,8 +163,13 @@ iframe {
       padding:10px 20px;
     }
 
+    .btn-custom2{
+         background:#6c63ff;
+      color:white;
+    }
+
     .btn-custom:hover{
-      background:#e5486f;
+      background:#cdb5f6;
       color:white;
     }
 .login-screen {
@@ -173,14 +178,14 @@ iframe {
     left: 0;
     width: 100% ;
     height: 100vh;
-    background: linear-gradient(135deg, #533a47, #7e6b81);
+    background: linear-gradient(135deg, #a74979, #b66cc2);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 99999;
 }
 .login-box {
-    background-color: #61363f;
+    background-color: #b46a94;
     padding: 40px;
     border-radius: 12px;
     width: 90%;
@@ -258,9 +263,6 @@ iframe {
     height:100px;
 }
 
-.text-login{
-    color:white;
-}
    .evidencia {
             cursor: pointer;
             transition: transform 0.3s;
@@ -284,3 +286,145 @@ iframe {
             width: 100%;
             height: auto;
         }
+
+
+           .titulo {
+            text-align: center;
+            margin: 40px 0 10px;
+            font-weight: bold;
+            color: #7b2cbf;
+        }
+
+        .subtitulo {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #68758b;
+        }
+
+        .flashcard {
+            height: 380px;
+            perspective: 1000px;
+        }
+
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.7s ease;
+        }
+
+        .flashcard.girada .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flashcard-front,
+        .flashcard-back {
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            overflow: hidden;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            box-shadow: 0 8px 25px rgba(34, 53, 91, 0.13);
+        }
+
+        .flashcard-front {
+            background: linear-gradient(145deg, #6ab7bd, #8290cf);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .icono {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .flashcard-front h3 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .flashcard-back {
+            background: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flashcard-back img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+        }
+
+        .contenido {
+            padding: 17px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .contenido h4 {
+            color: #425cb4;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .contenido p {
+            font-size: 14px;
+            line-height: 1.5;
+            flex: 1;
+            margin-bottom: 12px;
+        }
+
+        .btn-girar {
+            background: white;
+            color: #4059ad;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-girar:hover {
+            background: #e8edff;
+            transform: scale(1.04);
+        }
+
+        .btn-volver {
+            background: #536bc2;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            align-self: flex-start;
+        }
+
+        .btn-volver:hover {
+            background: #354c9d;
+        }
+
+        .flashcard:focus-within {
+            outline: 3px solid #9aabf7;
+            outline-offset: 4px;
+            border-radius: 22px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .flashcard-inner {
+                transition: none;
+            }
+        }
+
+        .separator{
+            height: 200px;
+             }
